@@ -1,0 +1,29 @@
+# --- Large binary assets (never commit) ---
+*.glb
+*.gltf
+*.bin
+models/
+*.task
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+
+# --- Application source (this GitHub repo is documentation-only) ---
+*.py
+requirements.txt
+rain_project/
+
+# --- OS / editor ---
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
