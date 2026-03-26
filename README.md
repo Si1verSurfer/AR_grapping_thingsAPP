@@ -6,31 +6,48 @@ This GitHub repository is intentionally **documentation-only**: large binaries (
 
 ---
 
+## Screenshots
+
+Captured from the **web viewer** (`GET /`): live mirrored camera, MediaPipe hand skeleton, HUD (ducks count, FPS, gesture label), and the 2D duck overlay. Grid and instructions are composited in the video frame on the server.
+
+**Open hand — landmark overlay and “Gesture: open”**
+
+![Web viewer: live camera with hand tracking, open gesture, Duck #1, and Clear ducks control](docs/screenshots/screenshot-01.png)
+
+**Pinch — grab active (“GRABBED!”, “MOVE HAND TO DRAG”)**
+
+![Web viewer: pinch gesture with Duck #1 grabbed and status bar showing GRABBED](docs/screenshots/screenshot-02.png)
+
+Source files for these images live in [`docs/screenshots/`](docs/screenshots/) (`screenshot-01.png`, `screenshot-02.png`).
+
+---
+
 ## Table of contents
 
-1. [Goals and non-goals](#goals-and-non-goals)
-2. [High-level architecture](#high-level-architecture)
-3. [Technology stack](#technology-stack)
-4. [Runtime components](#runtime-components)
-5. [Data flow](#data-flow)
-6. [Hand tracking pipeline](#hand-tracking-pipeline)
-7. [Gesture semantics](#gesture-semantics)
-8. [Duck objects and rendering](#duck-objects-and-rendering)
-9. [Threading and concurrency](#threading-and-concurrency)
-10. [Network API overview](#network-api-overview)
-11. [HTTP routes reference](#http-routes-reference)
-12. [Web viewer behavior](#web-viewer-behavior)
-13. [Configuration and environment](#configuration-and-environment)
-14. [Local files expected on disk](#local-files-expected-on-disk)
-15. [Installation outline](#installation-outline)
-16. [Starting the server](#starting-the-server)
-17. [Accessing from another device](#accessing-from-another-device)
-18. [Simulation mode](#simulation-mode)
-19. [Performance considerations](#performance-considerations)
-20. [Troubleshooting](#troubleshooting)
-21. [Security and deployment notes](#security-and-deployment-notes)
-22. [Version history and compatibility](#version-history-and-compatibility)
-23. [Credits and references](#credits-and-references)
+1. [Screenshots](#screenshots)
+2. [Goals and non-goals](#goals-and-non-goals)
+3. [High-level architecture](#high-level-architecture)
+4. [Technology stack](#technology-stack)
+5. [Runtime components](#runtime-components)
+6. [Data flow](#data-flow)
+7. [Hand tracking pipeline](#hand-tracking-pipeline)
+8. [Gesture semantics](#gesture-semantics)
+9. [Duck objects and rendering](#duck-objects-and-rendering)
+10. [Threading and concurrency](#threading-and-concurrency)
+11. [Network API overview](#network-api-overview)
+12. [HTTP routes reference](#http-routes-reference)
+13. [Web viewer behavior](#web-viewer-behavior)
+14. [Configuration and environment](#configuration-and-environment)
+15. [Local files expected on disk](#local-files-expected-on-disk)
+16. [Installation outline](#installation-outline)
+17. [Starting the server](#starting-the-server)
+18. [Accessing from another device](#accessing-from-another-device)
+19. [Simulation mode](#simulation-mode)
+20. [Performance considerations](#performance-considerations)
+21. [Troubleshooting](#troubleshooting)
+22. [Security and deployment notes](#security-and-deployment-notes)
+23. [Version history and compatibility](#version-history-and-compatibility)
+24. [Credits and references](#credits-and-references)
 
 ---
 
